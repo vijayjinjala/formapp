@@ -1,0 +1,16 @@
+.box{
+    width: 1344px;
+    height: 440px;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+.darkmode{
+    background: #000;
+    color: aliceblue;
+}
+.lightmode{
+    background: white;
+    color: #000;
+}
+

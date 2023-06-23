@@ -1,0 +1,129 @@
+<h1>Template driven form</h1>
+<div class="row justify-content-center">
+    <div class="col-md-6 bg-gray rounded shadow  py-3 ">
+<form (ngSubmit)="onsubmit(myform)" #myform="ngForm">
+  <div class="row">
+    <div class="col">
+    <div class="form-group fs-5 my-2">
+      <!-- <label for="firstname">firstname*</label> -->
+      <input type="text" class="form-control"  placeholder="Enter firstname" name="firstname" ngModel required >
+      <small class="text-danger" *ngIf="firstname && firstname.invalid && firstname.touched ">enter your firstname.</small>
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group fs-5 my-2">
+      <!-- <label for="middlename">middlename*</label> -->
+      <input type="text" class="form-control"  placeholder="Enter middlename" name="middlename" ngModel required >
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group fs-5 my-2">
+      <!-- <label for="lastname">lastname*</label> -->
+      <input type="text" class="form-control"  placeholder="Enter lastname" name="lastname" ngModel required >
+    </div>
+  </div>
+  </div>
+
+    <div class="row">
+      <div class="col">
+    <div class="form-group fs-5 my-2">
+      <label  for="select">Study:</label>
+      <select class="form-control" id="Study" name="Study" [ngModel]="defaultcourse">
+        <option value="Select Study">Select Study</option>
+        <option value="Html">Engineering</option>
+        <option value="Javascript">Medical</option>
+        <option value="Javascript">Arts</option>
+        <option value="Javascript">Commerce</option>
+      </select>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="form-group fs-5 my-2">
+      <label  for="select">select Blood-group:</label>
+      <select class="form-control" id="bgroup" name="bgroup" [ngModel]="defaultblood">
+        <option value="Select Blood Group">Select Blood Group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+    <div class="form-group fs-5 my-2">
+      <label  for="select">Profession:</label>
+      <select class="form-control" id="Profession" name="Profession" [ngModel]="defaultProfession">
+        <option value="select Profession">select Profession</option>
+        <option value="Job">Job</option>
+        <option value="Business">Business</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="form-group fs-5 my-2">
+      <label  for="select">Job type:</label>
+      <select class="form-control" id="jobtype" name="jobtype" [ngModel]="defaulttype">
+        <option value="select job type">select job type</option>
+        <option value="Government">Government</option>
+        <option value="Private">Private</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+    <div class="form-group fs-5 my-2">
+      <label  for="select">Business type:</label>
+      <select class="form-control" id="Businesstype" name="Businesstype" [ngModel]="defaulttype2">
+        <option value="select Business type">select Business type</option>
+        <option value="Builder">Builder</option>
+        <option value="Shop">Shop</option>
+        <option value="management">management</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="mb-3 fs-5 my-2">
+      <label for="exampleFormControlTextarea1" class="form-label">Perminant address:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3 fs-5 my-2">
+      <label for="exampleFormControlTextarea1" class="form-label">Current address:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3 fs-5 my-2">
+      <label for="exampleFormControlTextarea1" class="form-label">Any comments:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="email">email*</label>
+      <input type="email"  class="form-control" placeholder="Enter email" name="email" ngModel required email 
+      #email="ngModel">
+      <small class="text-danger" *ngIf="!email.valid && email.touched">please Enter valid Email. </small>
+    </div>
+    
+    <div class="form-group ">
+      <label  for="select">Select Course</label>
+      <select class="form-control" id="Course" name="Course" [ngModel]="defaultcourse">
+        <option value="Angular">Angular</option>
+        <option value="Html">Html</option>
+        <option value="Javascript">Javascript</option>
+      </select>
+    </div> -->
+    <button type="submit" class="btn btn-success m-1" >Submit</button>
+  </form>
+  </div>
+  </div>
+
+  <!-- [disabled]= "!myform.valid" -->

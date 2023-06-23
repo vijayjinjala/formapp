@@ -1,0 +1,48 @@
+<h1>hello</h1>
+
+<div class="box" [class.darkmode]="showdiv">
+    <div style="margin-left: 95%;">
+        <i [class.bi-brightness-high-fill]=showon [class.bi-moon-stars-fill]=showon1 class="bi m-4 fs-2 "
+            (click)="toggle()"></i>
+    </div>
+    <h2>hello vijay</h2>
+    <br>
+    <input type="tel" #sname placeholder="enter your name:"><br>
+
+    <button class="btn btn-primary m-2" (click)="adddata(sname)">Add data</button>
+    <button class="btn btn-primary" (click)="deletelast()">delete last</button>
+
+
+<table border="3ps solid gray" class="m-2">
+    <tr>
+        <th>sr no.</th>
+        <th>name.</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let items of mydate; index as i">
+        <td> {{i}} </td>
+        <td> {{items}} </td>
+        <td> <button (click)="deleteonmydate(i)">DELETE</button> </td>
+    </tr>
+</table>
+<br>
+
+<div class="demo-section">
+    Icon with a badge
+    <mat-icon [matBadge]="count" matBadgeColor="warn" [matBadgeHidden]="count==0">home</mat-icon>
+  </div>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Actions Buttons</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-mini-fab color="primary" (click)="onadd()"><mat-icon>add</mat-icon></button>
+      <strong class="m-2">{{count}}</strong>
+      <button mat-mini-fab color="primary" (click)="onremove()"><mat-icon>remove</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+  
